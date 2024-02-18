@@ -8,7 +8,23 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            margin: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .content {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #4285f4;
         }
 
         p {
@@ -16,19 +32,17 @@
             line-height: 1.6;
             margin-bottom: 15px;
         }
-
-        h1 {
-            color: #4285f4;
-        }
     </style>
 </head>
 <body>
-    <h1>Zeynep</h1>
-    <p>In 2019, I graduated from Gaziantep Anatolian High School. 
-        I completed one year of English preparatory education at the upper intermediate level.
-        I am a 3rd-year student at Ankara Yildirim Beyazit University Computer Engineering Department.
-        In previous years, I developed mobile games with C++ using the Qt game engine.
-        We are developing mobile application projects using Flutter with my teammates. 
-        I also have knowledge about Python, C, C++, Dart, and Java languages.</p>
+    <div class="content">
+        <h1>Zeynep</h1>
+        <p>In 2019, I graduated from Gaziantep Anatolian High School. 
+            I completed one year of English preparatory education at the upper intermediate level.
+            I am a 3rd-year student at Ankara Yildirim Beyazit University Computer Engineering Department.
+            In previous years, I developed mobile games with C++ using the Qt game engine.
+            We are developing mobile application projects using Flutter with my teammates. 
+            I also have knowledge about Python, C, C++, Dart, and Java languages.</p>
+    </div>
 </body>
 </html>

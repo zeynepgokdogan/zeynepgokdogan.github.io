@@ -12,16 +12,22 @@ window.onload = function () {
 };
 
 function displayResults() {
- 
-  var average = scores.reduce((sum, score) => sum + score, 0) / scores.length;
-
+  var maxScoreIndex = scores.indexOf(Math.max(...scores));
+  var highestScorerName = names[maxScoreIndex];
   var highestScore = Math.max(...scores);
+
+  console.log("maxScoreIndex:", maxScoreIndex);
+  console.log("highestScorerName:", highestScorerName);
+  console.log("highestScore:", highestScore);
+
+  var average = scores.reduce((sum, score) => sum + score, 0) / scores.length;
 
   var resultsDiv = $("results");
   resultsDiv.innerHTML = "<h2>Results</h2>" +
-                         "<p>Average score: " + average.toFixed(2) + "</p>" +
-                         "<p>Highest score: " + highestScore + "</p>";
+                         "<p>Average score = " + average.toFixed(2) + "</p>" +
+                         "<p>Highest score = " + highestScorerName + " with a score of " + highestScore + "</p>";
 }
+
 
 function displayScores() {
   var scoresTable = $("scores_table");

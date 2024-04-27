@@ -28,10 +28,9 @@ function displayResults() {
                          "<p>Highest score = " + highestScorerName + " with a score of " + highestScore + "</p>";
 }
 
-
 function displayScores() {
   var scoresTable = $("scores_table");
-  scoresTable.innerHTML = "<tr><th>Name</th><th>Score</th></tr>";
+  scoresTable.innerHTML = "<h2>Scores</h2>" + "<tr><td><b>Name</b></td> <td><b>Score</b></td></tr>";
 
   for (var i = 0; i < names.length; i++) {
     var row = document.createElement("tr");
@@ -57,7 +56,7 @@ function addScore() {
 
   var score = parseFloat(scoreInput.value);
   if (isNaN(score) || score < 0 || score > 100) {
-    alert("You must enter a valid score (0-100)");
+    alert("You must enter a valid score");
     scoreInput.focus();
     return;
   }
@@ -65,11 +64,7 @@ function addScore() {
   names.push(nameInput.value.trim());
   scores.push(score);
 
-
   nameInput.value = "";
   scoreInput.value = "";
   nameInput.focus();
-
-  displayScores();
 }
-

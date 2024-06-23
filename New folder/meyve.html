@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>My List</title>
+        <script>
+            let fruit = new Map();
+            fruit.set('apple' , 10);
+            fruit.set('banana' , 200);
+            fruit.set('watermelon' , 60);
+            fruit.set('strawberry' , 50);
+
+            function listOfFruit(){
+                let text= "";
+                fruit.forEach(
+                    function(value,key){
+                        text += key + "=" + value + "<br>";
+                    }
+                )
+                document.getElementById("list").innerHTML = text;
+            }
+        </script>
+    </head>
+    <div id = "list"> Fruits</div>
+    <button type="button" onclick="listOfFruit()">Show List</button>
+    <body>
+        
+
+    </body>
+</html>

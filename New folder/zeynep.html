@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        my page</title>
+    <style>
+        ul li {
+            font-size: 50px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+<script>
+        function changeColor(element) {
+            element.style.color = "blue";
+
+
+        }
+        function changeColorBack(element) {
+            element.style.color = "red";
+
+        }
+        function changeBackgroundColor(){
+            document.getElementById("myid").style.backgroundColor = "BLUE";
+        }
+
+    </script>
+</head>
+
+<body>
+    
+    <div id="myid">
+        <p style="color: red ; font-size: 70px;">KUZENLER</p>
+        <ul>
+            <li onmouseover="changeColor(this)" onmouseout="changeColorBack(this)"> SEDEN </li>
+            <li onmouseover="changeColor(this)" onmouseout="changeColorBack(this)"> NEVRA </li>
+            <li onmouseover="changeColor(this)" onmouseout="changeColorBack(this)"> NURAN </li>
+            <li onmouseover="changeColor(this)" onmouseout="changeColorBack(this)"> ZEYNEP </li>
+        </ul>
+        
+    </div>
+    <button type=" button" onclick="changeBackgroundColor()">CLİCK ME</button>
+</body>
+
+</html>
